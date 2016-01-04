@@ -1,0 +1,47 @@
+PATH
+  remote: .
+  specs:
+    fog-cloudatcost (0.1.0)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.2.2)
+    excon (0.45.4)
+    fog-core (1.35.0)
+      builder
+      excon (~> 0.45)
+      formatador (~> 0.2)
+    fog-json (1.0.2)
+      fog-core (~> 1.0)
+      multi_json (~> 1.10)
+    fog-xml (0.1.2)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    formatador (0.2.5)
+    ipaddress (0.8.0)
+    mini_portile2 (2.0.0)
+    multi_json (1.11.2)
+    nokogiri (1.6.7.1)
+      mini_portile2 (~> 2.0.0.rc2)
+    rake (10.4.2)
+    rubyzip (0.9.9)
+    shindo (0.3.8)
+      formatador (>= 0.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.6)
+  fog-cloudatcost!
+  rake (~> 10.0)
+  rubyzip (~> 0.9.9)
+  shindo (~> 0.3)
+
+BUNDLED WITH
+   1.11.2
