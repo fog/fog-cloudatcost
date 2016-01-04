@@ -1,6 +1,7 @@
 language: ruby
 sudo: false
 script: bundle exec rake test
+cache: bundler
 branches:
   except:
     - "/\\Av\\d+\\Z/"
