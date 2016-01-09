@@ -32,3 +32,7 @@ matrix:
     gemfile: Gemfile
   allow_failures:
   - rvm: jruby-head
+
+addons:
+  code_climate:
+    repo_token: 412dc14b81fbd1f8d7356deb5feac31a8d69583d00ec1ba18040caf99343ee25
