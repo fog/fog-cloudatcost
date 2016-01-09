@@ -6,25 +6,16 @@ require 'bundler/setup'
 require 'rake/testtask'
 
 task :test do
-  sh("bundle exec shindont")
+  sh("bundle exec rspec")
 end
 
-
-require File.dirname(__FILE__) + '/lib/fog/cloudatcost'
+require_relative 'lib/fog/cloudatcost'
 
 task :default => :test
 mock = ENV['FOG_MOCK'] || 'true'
 
-Rake::TestTask.new do |t|
-  t.pattern = File.join('spec', '**', '*_spec.rb')
-  t.libs << 'spec'
-end
-
 namespace :test do
-  task :cloudatcost_specs do
-    sh('export FOG_MOCK=false && bundle exec rspec spec/fog/cloudatcost/*_spec.rb')
-  end
-  task :travis => [:cloudatcost_specs] do
-    sh("export FOG_MOCK=#{mock} && bundle exec shindont")
+  task :travis do
+    sh("export FOG_MOCK=#{mock} && bundle exec rspec")
   end
 end

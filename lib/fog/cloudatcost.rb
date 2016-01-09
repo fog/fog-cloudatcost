@@ -1,2 +1,5 @@
-#require File.expand_path('../cloudatcost/version', __FILE__)
+require 'fog/core'
+require 'fog/xml'
+require 'fog/json'
+
 require_relative 'cloudatcost/version'
