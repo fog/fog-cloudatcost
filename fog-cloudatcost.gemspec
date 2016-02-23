@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec',  '~> 3.4.0'
   spec.add_development_dependency 'rubyzip', '~> 1.1.0'
 
-  spec.add_dependency 'fog-core',  '~> 1.27'
+  spec.add_dependency 'fog-core',  '~> 1.36'
   spec.add_dependency 'fog-json',  '~> 1.0'
   spec.add_dependency 'fog-xml',   '~> 0.1'
   spec.add_dependency 'ipaddress', '~> 0.8'
