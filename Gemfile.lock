@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     fog-cloudatcost (0.1.1)
-      fog-core (~> 1.27)
+      fog-core (~> 1.36)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
