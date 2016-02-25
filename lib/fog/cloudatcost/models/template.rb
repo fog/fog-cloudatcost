@@ -2,8 +2,8 @@ module Fog
   module Compute
     class CloudAtCost
       class Template < Fog::Model
-        identity :id
-        attribute :detail
+        identity :ce_id
+        attribute :name
       end
     end
   end
