@@ -23,6 +23,7 @@ module Fog
       request :power_off
       request :power_on
       request :rename_server
+      request :delete_server
       request :reset
       request :reverse_dns
       request :run_mode
