@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     fog-cloudatcost (0.2.1)
-      fog-core (~> 1.36)
+      fog-core (~> 1.40)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
@@ -11,14 +11,14 @@ GEM
   remote: http://rubygems.org/
   specs:
     builder (3.2.2)
-    codeclimate-test-reporter (0.4.8)
+    codeclimate-test-reporter (0.6.0)
       simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
-    excon (0.45.4)
-    fog-core (1.36.0)
+    excon (0.50.1)
+    fog-core (1.40.0)
       builder
-      excon (~> 0.45)
+      excon (~> 0.49)
       formatador (~> 0.2)
     fog-json (1.0.2)
       fog-core (~> 1.0)
@@ -29,16 +29,18 @@ GEM
     formatador (0.2.5)
     ipaddress (0.8.3)
     json (1.8.3)
-    mini_portile2 (2.0.0)
-    multi_json (1.11.2)
-    nokogiri (1.6.7.2)
-      mini_portile2 (~> 2.0.0.rc2)
-    rake (10.5.0)
+    mini_portile2 (2.1.0)
+    multi_json (1.12.1)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    pkg-config (1.1.7)
+    rake (11.2.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.3)
+    rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -58,12 +60,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.6)
+  bundler (~> 1.12)
   codeclimate-test-reporter
   fog-cloudatcost!
-  rake (~> 10.0)
+  rake (~> 11.2)
   rspec (~> 3.4.0)
   rubyzip (~> 1.1.0)
 
 BUNDLED WITH
-   1.11.2
+   1.12.4
