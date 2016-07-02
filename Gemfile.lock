@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    fog-cloudatcost (0.2.2)
-      fog-core (~> 1.40)
+    fog-cloudatcost (0.2.3)
+      fog-core (~> 1.41)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
       ipaddress (~> 0.8)
@@ -16,7 +16,7 @@ GEM
     diff-lcs (1.2.5)
     docile (1.1.5)
     excon (0.50.1)
-    fog-core (1.40.0)
+    fog-core (1.41.0)
       builder
       excon (~> 0.49)
       formatador (~> 0.2)
