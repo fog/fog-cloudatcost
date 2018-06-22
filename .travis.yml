@@ -18,7 +18,6 @@ matrix:
     gemfile: Gemfile
   - rvm: 2.5
     gemfile: gemfiles/Gemfile-edge
-    env: COVERAGE=true
   - rvm: jruby-head
     gemfile: Gemfile
   - rvm: jruby-head
