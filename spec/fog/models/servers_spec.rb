@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'fog/cloudatcost/models/servers'
 
@@ -8,4 +10,3 @@ describe Fog::Compute::CloudAtCost::Servers do
     expect(subject.model).to eq(Fog::Compute::CloudAtCost::Server)
   end
 end
-

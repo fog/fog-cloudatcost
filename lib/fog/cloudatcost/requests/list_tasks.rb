@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 module Fog
   module Compute
     class CloudAtCost
       class Real
         def list_tasks
           request(
-            :expects => [200],
-            :method => 'GET',
-            :path => '/api/v1/listtasks.php'
+            expects: [200],
+            method: 'GET',
+            path: '/api/v1/listtasks.php'
           )
         end
       end
@@ -17,8 +19,8 @@ module Fog
           response = Excon::Response.new
           response.status = 200
           response.body = {
-              'status' => 'OK',
-              'servers'  => self.data[:data]
+            'status' => 'OK',
+            'servers' => data[:data]
           }
           response
         end

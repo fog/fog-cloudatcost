@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'fog/cloudatcost/core'
 
 module Fog
   module Compute
     class CloudAtCost < Fog::Service
       requires :api_key, :email
-
 
       model_path 'fog/cloudatcost/models'
       model :server
@@ -29,34 +30,31 @@ module Fog
       request :run_mode
 
       class Mock
-
-        def initialize(options={})
+        def initialize(options = {})
           @api_key = options[:api_key]
-          @email   = options[:email]
+          @email = options[:email]
         end
-
       end
 
       class Real
-
-        def initialize(options={})
+        def initialize(options = {})
           @api_key = options[:api_key]
-          @email   = options[:email]
-          persistent         = false
-          @connection        = Fog::Core::Connection.new 'https://panel.cloudatcost.com', persistent, options
+          @email = options[:email]
+          persistent = false
+          @connection = Fog::Core::Connection.new 'https://panel.cloudatcost.com', persistent, options
         end
 
         def request(params)
           params[:headers] ||= { 'Content-Type' => 'application/x-www-form-urlencoded' }
           params[:query] ||= {}
           required_params = {
-            key: "#{@api_key}",
-            login: "#{@email}"
+            key: @api_key.to_s,
+            login: @email.to_s
           }
           begin
-            if params[:method] == 'POST' 
+            if params[:method] == 'POST'
               params_body = required_params.merge(params[:body])
-              params[:body] = params_body.reduce(""){ |acc,(x,y)| "#{acc}&#{x}=#{y}" }
+              params[:body] = params_body.reduce('') { |acc, (x, y)| "#{acc}&#{x}=#{y}" }
             else
               params[:query] = required_params.merge(params[:query])
             end
@@ -69,12 +67,11 @@ module Fog
                     error
                   end
           end
-          unless response.body.empty?
-            response.body = Fog::JSON.decode(response.body)
-          end
+
+          response.body = Fog::JSON.decode(response.body) unless response.body.empty?
+
           response
         end
-
       end
     end
   end

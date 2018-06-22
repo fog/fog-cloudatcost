@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'fog/compute/models/server'
 
 module Fog
   module Compute
     class CloudAtCost
       class Server < Fog::Compute::Server
-        identity  :sid
+        identity :sid
         attribute :id
         attribute :CustID
         attribute :packageid
@@ -35,19 +37,18 @@ module Fog
         attribute :rdnsdefault
         attribute :template_id
 
-
         def new_instance?
-          not persisted?
+          !persisted?
         end
 
         def save
-          raise Fog::Errors::Error.new('Re-saving an existing object may create a duplicate') if persisted?
+          raise Fog::Errors::Error, 'Re-saving an existing object may create a duplicate' if persisted?
           save!
         end
 
         def save!
           requires :cpu, :ram, :storage, :template_id
-          data = service.create_server(cpu, ram, storage, template_id)
+          service.create_server(cpu, ram, storage, template_id)
         end
 
         def destroy
@@ -89,7 +90,6 @@ module Fog
           response = service.send(action, sid, *args)
           response.body
         end
-
       end
     end
   end

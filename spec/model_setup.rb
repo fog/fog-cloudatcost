@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 module ModelSetup
   def self.included(base)
     base.class_eval do
       let(:arguments) do
         {
-          :api => ''
+          api: ''
         }
       end
 
