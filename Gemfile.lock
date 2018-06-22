@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fog-cloudatcost (0.2.3)
+    fog-cloudatcost (0.3.0)
       fog-core
       fog-json
       fog-xml

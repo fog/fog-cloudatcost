@@ -16,3 +16,6 @@ Metrics/BlockLength:
 Layout/ExtraSpacing:
   AllowForAlignment: false
   ForceEqualSignAlignment: false
+
+Style/ExpandPathArguments:
+  Enabled: false
