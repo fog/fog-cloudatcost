@@ -1,21 +1,13 @@
 # frozen_string_literal: true
 
 require 'bundler/gem_tasks'
-require 'rubygems'
-require 'bundler/setup'
 require 'rake/testtask'
 
-task :test do
-  sh('bundle exec rspec')
+Rake::TestTask.new do |t|
+  t.libs.push %w(spec)
+  t.test_files = FileList['spec/**/*_spec.rb']
+  t.verbose = true
 end
 
-require_relative 'lib/fog/cloudatcost'
-
-task default: :test
-mock = ENV['FOG_MOCK'] || 'true'
-
-namespace :test do
-  task :travis do
-    sh("export FOG_MOCK=#{mock} && bundle exec rspec")
-  end
-end
+desc 'Default Task'
+task :default => [ :test ]

@@ -1,6 +1,3 @@
-sudo: false
-script: bundle exec rake test
-cache: bundler
 matrix:
   fast_finish: true
   include:
