@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/server'
 
-describe Fog::Compute::CloudAtCost::Server do
+RSpec.describe Fog::Compute::CloudAtCost::Server do
   let(:server) { Fog::Compute::CloudAtCost::Server.new }
 
   server_attributes = %w[sid id CustID packageid label servername

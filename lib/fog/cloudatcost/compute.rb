@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
-require 'fog/cloudatcost/core'
-
 module Fog
   module Compute
     class CloudAtCost < Fog::Service
       requires :api_key, :email
+
+      autoload :Server, File.expand_path('../models/server', __FILE__)
+      autoload :Servers, File.expand_path('../models/servers', __FILE__)
+      autoload :Task, File.expand_path('../models/task', __FILE__)
+      autoload :Tasks, File.expand_path('../models/tasks', __FILE__)
+      autoload :Template, File.expand_path('../models/template', __FILE__)
+      autoload :Templates, File.expand_path('../models/templates', __FILE__)
 
       model_path 'fog/cloudatcost/models'
       model :server

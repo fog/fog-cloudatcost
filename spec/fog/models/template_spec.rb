@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/template'
 
-describe Fog::Compute::CloudAtCost::Template do
+RSpec.describe Fog::Compute::CloudAtCost::Template do
   let(:server) { Fog::Compute::CloudAtCost::Template.new }
 
   it 'respond to #id' do

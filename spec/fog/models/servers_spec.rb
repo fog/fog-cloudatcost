@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/servers'
 
-describe Fog::Compute::CloudAtCost::Servers do
+RSpec.describe Fog::Compute::CloudAtCost::Servers do
   subject { Fog::Compute::CloudAtCost::Servers }
 
   it 'should have a collection of servers' do

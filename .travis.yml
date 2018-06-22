@@ -1,3 +1,4 @@
+script: bundle exec rake && CODECLIMATE_REPO_TOKEN=412dc14b81fbd1f8d7356deb5feac31a8d69583d00ec1ba18040caf99343ee25 bundle exec codeclimate-test-reporter
 matrix:
   fast_finish: true
   include:
@@ -17,11 +18,8 @@ matrix:
     gemfile: Gemfile
   - rvm: 2.5
     gemfile: gemfiles/Gemfile-edge
+    env: COVERAGE=true
   - rvm: jruby-head
     gemfile: Gemfile
   - rvm: jruby-head
     gemfile: gemfiles/Gemfile-edge
-
-addons:
-  code_climate:
-    repo_token: 412dc14b81fbd1f8d7356deb5feac31a8d69583d00ec1ba18040caf99343ee25

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/tasks'
 
-describe Fog::Compute::CloudAtCost::Tasks do
+RSpec.describe Fog::Compute::CloudAtCost::Tasks do
   subject { Fog::Compute::CloudAtCost::Tasks }
 
   it 'should have a collection of tasks' do

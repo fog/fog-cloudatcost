@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/task'
 
-describe Fog::Compute::CloudAtCost::Task do
+RSpec.describe Fog::Compute::CloudAtCost::Task do
   let(:server) { Fog::Compute::CloudAtCost::Task.new }
 
   it 'respond to #id' do

@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'fog/cloudatcost/models/templates'
 
-describe Fog::Compute::CloudAtCost::Templates do
+RSpec.describe Fog::Compute::CloudAtCost::Templates do
   subject { Fog::Compute::CloudAtCost::Templates }
 
   it 'should have a collection of templates' do
